@@ -29,8 +29,7 @@
 - **Version:** 1.0.0
 - **Type:** Learning Management System (LMS)
 - **License:** MIT
-- **Author:** [Your Name]
-- **Repository:** [GitHub URL]
+
 
 ### Key Objectives
 - Provide an easy-to-use platform for course management
@@ -1168,10 +1167,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 ## 21. Contact & Support
 
-- **Author:** [Your Name]
-- **Email:** [your.email@example.com]
-- **GitHub:** [https://github.com/yourusername](https://github.com/yourusername)
-- **Website:** [https://yourwebsite.com](https://yourwebsite.com)
+- **Author:** Harshraj Singh 
+- **Email:** harshraj9804@gmail.com
+
 
 ***
 
