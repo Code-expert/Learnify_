@@ -1,0 +1,385 @@
+@import "tailwindcss";
+
+/* Custom theme configuration */
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  
+  --color-secondary-500: #8b5cf6;
+  --color-secondary-600: #7c3aed;
+  
+  --color-accent-500: #ec4899;
+  --color-accent-600: #db2777;
+}
+
+/* Global styles */
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+/* Lesson Content Styles */
+.prose h2 {
+  @apply text-3xl font-bold text-gray-900 mt-12 mb-4 scroll-mt-24;
+}
+
+.prose h3 {
+  @apply text-2xl font-bold text-gray-900 mt-8 mb-3 scroll-mt-24;
+}
+
+.prose p {
+  @apply text-lg text-gray-700 leading-relaxed mb-6;
+}
+
+.prose ul,
+.prose ol {
+  @apply text-lg text-gray-700 leading-relaxed mb-6 space-y-2;
+}
+
+.prose ul {
+  @apply list-disc list-inside ml-4;
+}
+
+.prose ol {
+  @apply list-decimal list-inside ml-4;
+}
+
+.prose li {
+  @apply ml-4;
+}
+
+.prose a {
+  @apply text-blue-600 hover:text-blue-700 underline font-medium;
+}
+
+.prose code {
+  @apply bg-gray-100 text-pink-600 px-2 py-1 rounded font-mono text-sm;
+}
+
+.prose pre {
+  @apply my-6;
+}
+
+.prose pre code {
+  @apply bg-transparent text-inherit p-0 rounded-none;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-500 pl-6 py-4 my-6 bg-blue-50 rounded-r-lg italic text-gray-700;
+}
+
+.prose img {
+  @apply rounded-2xl shadow-lg my-8 w-full;
+}
+
+.prose strong {
+  @apply font-bold text-gray-900;
+}
+
+.prose em {
+  @apply italic;
+}
+/* Lesson Content Styles */
+.lesson-content h2 {
+  @apply text-3xl font-bold text-gray-900 mt-12 mb-4;
+}
+
+.lesson-content h3 {
+  @apply text-2xl font-bold text-gray-900 mt-8 mb-3;
+}
+
+.lesson-content p {
+  @apply text-lg text-gray-700 leading-relaxed mb-6;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  @apply text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-6;
+}
+
+.lesson-content ul {
+  @apply list-disc;
+}
+
+.lesson-content ol {
+  @apply list-decimal;
+}
+
+.lesson-content li {
+  @apply ml-4;
+}
+
+.lesson-content a {
+  @apply text-blue-600 hover:text-blue-700 underline font-medium;
+}
+
+.lesson-content code {
+  @apply bg-gray-100 text-pink-600 px-2 py-1 rounded font-mono text-sm;
+}
+
+.lesson-content pre {
+  @apply my-6 bg-gray-900 rounded-xl p-4 overflow-x-auto;
+}
+
+.lesson-content pre code {
+  @apply bg-transparent text-gray-100 p-0;
+}
+
+.lesson-content blockquote {
+  @apply border-l-4 border-blue-500 pl-6 py-4 my-6 bg-blue-50 rounded-r-lg italic text-gray-700;
+}
+
+.lesson-content img {
+  @apply rounded-2xl shadow-lg my-8 w-full;
+}
+
+.lesson-content strong {
+  @apply font-bold text-gray-900;
+}
+
+.lesson-content em {
+  @apply italic;
+}
+/* Enhanced Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(209, 213, 219, 0.2);
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Button glow effect */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+}
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Blob Animation */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 15s linear infinite;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Slow Pulse */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Slow Spin */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
